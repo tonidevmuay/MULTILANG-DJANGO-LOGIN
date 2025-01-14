@@ -8,4 +8,4 @@ class UserProfile(models.Model):
         ('fr', 'Français')
     ]
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    language = models.CharField(max_length=2, choices=LANGUAGE_CHOICES, default='en')
+    language = models.CharField(max_length=2, choices=LANGUAGE_CHOICES, null=True, blank=True)

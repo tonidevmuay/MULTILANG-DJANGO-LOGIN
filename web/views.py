@@ -2,8 +2,8 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.utils import translation
 from django.conf import settings
+from web.utils import get_user_language
 
-from web.models import UserProfile
 
 def index(request):
     if request.user.is_authenticated:
@@ -12,7 +12,7 @@ def index(request):
         user_language = settings.LANGUAGE_CODE
         
     translation.activate(user_language)
-    request.session['django_language'] = user_language  # Cambiado aquí
+    request.session['django_language'] = user_language 
     return render(request, 'index.html')
 
 @login_required
@@ -23,22 +23,20 @@ def about(request):
 def contact(request):
     return render(request, 'contact.html')
   
+
+
 @login_required
-def change_language(request):
+def change_language(request):  # Solo guardamos en el perfil si el usuario explícitamente selecciona un idioma
     if request.method == 'POST':
         language = request.POST.get('language')
         if language:
-            # Guardar preferencia de usuario
-            if not hasattr(request.user, 'userprofile'):
-                UserProfile.objects.create(user=request.user)
+           
             request.user.userprofile.language = language
             request.user.userprofile.save()
-            
-            # Activar el idioma
             translation.activate(language)
-            request.session['django_language'] = language  # Cambiado aquí
-            
-            response = redirect(request.META.get('HTTP_REFERER', 'index'))
-            response.set_cookie(settings.LANGUAGE_COOKIE_NAME, language)
-            return response
-    return redirect('index')
+    else:
+        # En peticiones GET, usamos el helper
+        language = get_user_language(request)
+        translation.activate(language)
+    
+    return redirect(request.META.get('HTTP_REFERER', '/'))
