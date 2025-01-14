@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-13 17:11+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\web\templates\about.html:4 .\web\templates\base.html:34
+msgid "About"
+msgstr "Acerca de"
+
+#: .\web\templates\about.html:8 .\web\templates\contact.html:8
+#: .\web\templates\index.html:8
+msgid "welcome"
+msgstr "Bienvenidos al multi idioma"
+
+#: .\web\templates\about.html:9 .\web\templates\contact.html:9
+#: .\web\templates\index.html:9
+msgid "welcome_parrafo"
+msgstr "Esto es una prueba de idioma"
+
+#: .\web\templates\about.html:10
+msgid "page_about"
+msgstr "Esta es la página de ACERCA DE"
+
+#: .\web\templates\base.html:24 .\web\templates\logout.html:4
+msgid "Logout"
+msgstr ""
+
+#: .\web\templates\base.html:32 .\web\templates\index.html:4
+msgid "Home"
+msgstr "Página principal"
+
+#: .\web\templates\base.html:33 .\web\templates\contact.html:4
+msgid "Contact"
+msgstr "Contacto"
+
+#: .\web\templates\contact.html:10
+msgid "page_contact"
+msgstr "Esta es la página CONTACTO"
+
+#: .\web\templates\index.html:10
+msgid "page_home"
+msgstr "Esta es la página PRINCIPAL"
+
+#: .\web\templates\login.html:4 .\web\templates\login.html:9
+#: .\web\templates\login.html:21
+msgid "Login"
+msgstr ""
+
+#: .\web\templates\logout.html:8
+msgid "Logout Successful"
+msgstr ""
+
+#: .\web\templates\logout.html:9
+msgid "You have been successfully logged out."
+msgstr ""
+
+#: .\web\templates\logout.html:10
+msgid "Login again"
+msgstr ""
+
+#~ msgid "English"
+#~ msgstr "Inglés"
+
+#~ msgid "Spanish"
+#~ msgstr "Español"
+
+#~ msgid "French"
+#~ msgstr "Francés"
